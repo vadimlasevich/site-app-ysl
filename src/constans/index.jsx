@@ -2,9 +2,9 @@ import React from 'react';
 import { SvgAddress, SvgAndroid, SvgEmail, SvgMicrokontroller, SvgPhone, SvgRepair, SvgWebDevelopement } from '../components/svg';
 
 export const navLinks = [
-  { id: 1, href: '#our-services', label: 'Наши услуги' },
-  { id: 2, href: '#why-choose', label: 'Почему мы?' },
-  { id: 3, href: '#contacts', label: 'Контакты' },
+  { id: 1, href: '/site-app-ysl/#our-services', label: 'Наши услуги' },
+  { id: 2, href: '/site-app-ysl/#why-choose', label: 'Почему мы?' },
+  { id: 3, href: '/site-app-ysl/#contacts', label: 'Контакты' },
 ];
 
 export const ourServices = [

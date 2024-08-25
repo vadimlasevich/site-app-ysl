@@ -3,7 +3,7 @@ import { About, Contacts, FAQ, Footer, Hero, OurServices, WhyChoose } from './se
 
 const App = () => (
   <main className="font-montserrat">
-    <Nav />
+    <Nav absolute={true} />
     <section id="#">
       <Hero />
     </section>
