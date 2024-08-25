@@ -12,19 +12,19 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: 'service/repair',
+    path: '/site-app-ysl/service/repair',
     element: <RepairPage />,
   },
   {
-    path: 'service/web-development',
+    path: '/site-app-ysl/service/web-development',
     element: <WebDeveloperPage />,
   },
   {
-    path: 'service/mobile-development',
+    path: '/site-app-ysl/service/mobile-development',
     element: <MobileDeveloperPage />,
   },
   {
-    path: 'service/microcontroller-development',
+    path: '/site-app-ysl/service/microcontroller-development',
     element: <MicrocontrollersDeveloperPage />,
   },
 ]);
