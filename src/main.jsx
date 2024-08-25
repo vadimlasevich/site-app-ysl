@@ -7,7 +7,7 @@ import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/site-app-ysl/',
     element: <App />,
     errorElement: <NotFoundPage />,
   },
