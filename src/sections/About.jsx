@@ -1,5 +1,4 @@
 import React from 'react';
-import { SvgAbout } from '../components/svg';
 
 const About = () => {
   return (
@@ -9,9 +8,7 @@ const About = () => {
         <h2 className="text-4xl font-bold">Лучшее ИТ-решение 2024 года</h2>
         <p>Здесь нужен какой-то текст</p>
       </div>
-      <div className="w-[45%]">
-        <SvgAbout size={'100%'} />
-      </div>
+      <div className="w-[45%]"></div>
     </div>
   );
 };

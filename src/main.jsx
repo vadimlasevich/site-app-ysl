@@ -1,7 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { MicrocontrollersDeveloperPage, MobileDeveloperPage, NotFoundPage, RepairPage, WebDeveloperPage } from './pages';
+import {
+  MicrocontrollersDeveloperPage,
+  MobileDeveloperPage,
+  NotFoundPage,
+  PowerSupplyPage,
+  PrintingPage,
+  RepairPage,
+  WebDeveloperPage,
+} from './pages';
 import App from './App.jsx';
 import './index.css';
 
@@ -26,6 +34,14 @@ const router = createBrowserRouter([
   {
     path: '/site-app-ysl/service/microcontroller-development',
     element: <MicrocontrollersDeveloperPage />,
+  },
+  {
+    path: '/site-app-ysl/service/3D-printing',
+    element: <PrintingPage />,
+  },
+  {
+    path: '/site-app-ysl/service/power-supply',
+    element: <PowerSupplyPage />,
   },
 ]);
 

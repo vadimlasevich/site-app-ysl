@@ -18,9 +18,9 @@ const Footer = () => {
           <h4 className="text-slate-100 text-xl">Навигация</h4>
           <ul>
             {navLinks.map((item) => (
-              <li key={item.id} className="flex items-center gap-3 mt-5">
+              <li key={item.id} className="flex items-center gap-2 mt-3">
                 <SvgArrow size={20} />
-                <HashLink to={item.href} className="text-slate-200 transition hover:text-white">
+                <HashLink to={item.href} className="text-slate-200 transition text-sm hover:text-white">
                   {item.label}
                 </HashLink>
               </li>
@@ -31,9 +31,9 @@ const Footer = () => {
           <h4 className="text-slate-100 text-xl">Услуги</h4>
           <ul>
             {ourServices.map((item) => (
-              <li key={item.id} className="flex items-center gap-3 mt-5">
+              <li key={item.id} className="flex items-center gap-2 mt-3">
                 <SvgArrow size={20} />
-                <Link to={`/site-app-ysl/service/${item.href}`} className="text-slate-200 transition hover:text-white">
+                <Link to={`/site-app-ysl/service/${item.href}`} className="text-slate-200 text-sm transition hover:text-white">
                   {item.title}
                 </Link>
               </li>
