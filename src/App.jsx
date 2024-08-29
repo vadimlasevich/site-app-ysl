@@ -2,7 +2,7 @@ import { Nav } from './components';
 import { About, Contacts, FAQ, Footer, Hero, OurServices, WhyChoose } from './sections';
 
 const App = () => (
-  <main className="font-montserrat">
+  <main className="font-montserrat bg-slate-100">
     <Nav absolute={true} />
     <section id="#">
       <Hero />
@@ -13,7 +13,7 @@ const App = () => (
     {/* <section className="section">
       <About />
     </section> */}
-    <section id="why-choose" className="section bg-gradient-to-r from-[#d2ffe0] to-[#c5ffb8]">
+    <section id="why-choose" className="section bg-gradient-to-r from-[#dbffe6] to-[#c0ffd5]">
       <WhyChoose />
     </section>
     {/* <section>

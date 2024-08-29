@@ -12,7 +12,7 @@ const RepairPage = () => {
       <div className="flex flex-col grow justify-between">
         <div className="py-7 bg-light-green ">
           <div className="max-container">
-            <h2 className="text-3xl font-bold">Профессиональный ремонт и обслуживание промышленного оборудования</h2>
+            <h2 className="text-3xl font-bold">Профессиональный ремонт и обслуживание оборудования</h2>
           </div>
         </div>
         <div className="max-container py-10">

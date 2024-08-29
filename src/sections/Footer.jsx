@@ -42,9 +42,15 @@ const Footer = () => {
         </div>
       </div>
       <hr className="py-3" />
-      <div className="max-container flex justify-start gap-4 pb-4">
-        <span className="text-slate-400">© 2024</span>
-        <span className="text-slate-200">YSL Systems</span>
+      <div className="max-container flex justify-between pb-4">
+        <div>
+          <span className="text-slate-400 mr-5">© 2024</span>
+          <span className="text-slate-200">YSL Systems</span>
+        </div>
+        <div>
+          <span className="text-gray-400 text-lg">УНП</span>
+          <span className="text-gray-400 ml-2">291884454</span>
+        </div>
       </div>
     </div>
   );
