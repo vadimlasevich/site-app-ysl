@@ -17,7 +17,7 @@ const MicrocontrollersDeveloperPage = () => {
       </div>
       <div className="max-container ">
         <div className=" flex justify-between items-center my-10">
-          <div className="w-[48%]">
+          <div className="w-[48%] flex justify-center">
             <img src={MicrokontrollerImage} className="w-[80%] max-h-[80%]" />
           </div>
           <div className="w-[48%]">
