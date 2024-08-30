@@ -1,8 +1,8 @@
 import { Nav } from './components';
-import { About, Contacts, FAQ, Footer, Hero, OurServices, WhyChoose } from './sections';
+import { Contacts, Footer, Hero, OurServices, WhyChoose } from './sections';
 
 const App = () => (
-  <main className="font-montserrat bg-slate-100">
+  <main className="font-montserrat bg-main-bg text-text">
     <Nav absolute={true} />
     <section id="#">
       <Hero />
@@ -10,15 +10,9 @@ const App = () => (
     <section id="our-services" className="section">
       <OurServices />
     </section>
-    {/* <section className="section">
-      <About />
-    </section> */}
-    <section id="why-choose" className="section bg-gradient-to-r from-[#dbffe6] to-[#c0ffd5]">
+    <section id="why-choose" className="section bg-gradient-to-r from-[#aed8bd] to-[#f3fff3]">
       <WhyChoose />
     </section>
-    {/* <section>
-      <FAQ />
-    </section> */}
     <section id="contacts" className="section">
       <Contacts />
     </section>

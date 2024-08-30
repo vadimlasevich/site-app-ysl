@@ -20,7 +20,7 @@ const FormContacts = () => {
   const onSubmit = handleSubmit((data) => console.log(data));
   return (
     <form onSubmit={onSubmit} className="flex justify-between flex-wrap gap-5">
-      <div className="w-[48%]">
+      <div className="w-full lg:w-[48%]">
         <input
           {...register('name', {
             required: { value: true, message: 'Поле обязательно к заполнению' },
@@ -32,7 +32,7 @@ const FormContacts = () => {
         />
         {errors.name && <span className="text-xs text-red-400 mt-1">{errors.name.message}</span>}
       </div>
-      <div className="w-[48%]">
+      <div className="w-full lg:w-[48%]">
         {/* <Controller
           name="phone"
           control={control}

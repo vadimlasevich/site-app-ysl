@@ -5,17 +5,14 @@ import { Link } from 'react-router-dom';
 const OurServices = () => {
   return (
     <div className="max-container">
-      <h2 className="text-3xl text-light-green font-bold uppercase">наши услуги</h2>
-      <div className="mt-12 flex flex-wrap gap-y-8 justify-between">
+      <h2 className="section-title">наши услуги</h2>
+      <div className="flex flex-wrap gap-y-8 max-[600px]:gap-y-4 justify-between">
         {ourServices.map((item) => (
-          <div
-            key={item.id}
-            className="w-[32%] flex flex-col justify-between  p-6 shadow-xl rounded-xl bg-primary duration-150 hover:bg-green-200 hover:scale-105"
-          >
-            <div className="mb-5">{item.icon}</div>
+          <div key={item.id} className="container flex flex-col justify-between w-[32%] max-[850px]:w-[49%] max-[550px]:w-full">
+            <div className="mb-2 w-12 max-[550px]:w-8">{item.icon}</div>
             <div>
-              <h3 className="font-bold text-xl">{item.title}</h3>
-              <p className="text-sm mt-2 mb-7">{item.subtitle}</p>
+              <h3 className="container-title">{item.title}</h3>
+              <p className="container-text">{item.subtitle}</p>
             </div>
             <Link to={`service/${item.href}`} className="button self-start">
               Подробнее
@@ -28,5 +25,3 @@ const OurServices = () => {
 };
 
 export default OurServices;
-
-//border-2 border-light-green

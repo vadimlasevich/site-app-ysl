@@ -20,42 +20,42 @@ export const navLinks = [
 export const ourServices = [
   {
     id: 1,
-    icon: <SvgRepair size={60} />,
+    icon: <SvgRepair size={'100%'} />,
     title: 'Ремонт и обслуживание оборудования',
     subtitle: 'Дефектовка неисправностей промышленного оборудования. Ремонт электронных компонентов промышленного оборудования',
     href: 'repair',
   },
   {
     id: 2,
-    icon: <SvgWebDevelopement size={60} />,
+    icon: <SvgWebDevelopement size={'100%'} />,
     title: 'Веб-разработка',
     subtitle: 'Создание адаптивных кроссплатформенных сайтов, современных web-приложений а также desctop-приложений.',
     href: 'web-development',
   },
   {
     id: 3,
-    icon: <SvgAndroid size={60} />,
+    icon: <SvgAndroid size={'100%'} />,
     title: 'Разработка мобильных приложений',
     subtitle: 'Разработка на единой кодовой базе мобильных приложений для Android, IOS, HarmonyOS.',
     href: 'mobile-development',
   },
   {
     id: 4,
-    icon: <SvgMicrokontroller size={60} />,
+    icon: <SvgMicrokontroller size={'100%'} />,
     title: 'Работа с микроконтроллерами',
     subtitle: 'Разработка программ для микроконтроллеров Atmel, Espressif и ST Microelectronics',
     href: 'microcontroller-development',
   },
   {
     id: 5,
-    icon: <SvgPowerSupply size={60} />,
+    icon: <SvgPowerSupply size={'100%'} />,
     title: 'Солнечные батареи и бесперебойные системы подачи электричества',
     subtitle: 'Надежное и экологичное решение для тех, кто стремится к автономности и безопасности.',
     href: 'power-supply',
   },
   {
     id: 6,
-    icon: <Svg3D size={60} />,
+    icon: <Svg3D size={'100%'} />,
     title: '3D-Печать: Быстро, Точно, Эффективно',
     subtitle: '3D-печать для создания прототипов, малосерийного производства и изготовления уникальных деталей',
     href: '3D-printing',
@@ -86,17 +86,17 @@ export const whyChoose = [
 export const contactsInfo = [
   {
     id: 1,
-    icon: <SvgEmail size={40} />,
+    icon: <SvgEmail size={'100%'} />,
     text: 'info@yslsystems.by',
   },
   {
     id: 2,
-    icon: <SvgPhone size={40} />,
+    icon: <SvgPhone size={'100%'} />,
     text: '+375 29 729 4079',
   },
   {
     id: 3,
-    icon: <SvgAddress size={40} />,
+    icon: <SvgAddress size={'100%'} />,
     text: '224020 а/я 22, г. Брест',
   },
 ];

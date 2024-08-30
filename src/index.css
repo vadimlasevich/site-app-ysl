@@ -8,9 +8,10 @@
 @tailwind utilities;
 
 :root {
-  --main-green: #166041;
-  --light-green: #0cbe74;
+  --main-green: #138747;
+  --light-green: #19b45f;
   --footer-bg: #1c1d1c;
+  --main-bg: #f8f6f4;
 }
 
 * {
@@ -27,47 +28,28 @@
     padding: 0 1rem;
   }
   .button {
-    @apply self-center px-4 py-2 bg-gradient-to-r from-main-green to-light-green text-white duration-150 rounded-br-xl rounded-tl-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl;
+    @apply self-center px-4 py-2 bg-gradient-to-r from-green to-green-light text-white duration-150 rounded-br-xl rounded-tl-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl max-[550px]:text-xs;
   }
-  .section {
-    @apply py-20;
-  }
-
   .input {
-    @apply px-4 py-4 bg-slate-100 text-lg rounded-lg shadow-xl active:outline-light-green focus:outline-light-green;
+    @apply px-4 py-4 bg-slate-100 text-lg rounded-lg shadow-xl active:outline-green-light focus:outline-green-light max-[550px]:text-base max-[550px]:py-2;
+  }
+  .container {
+    @apply p-6 shadow-xl rounded-xl bg-container-bg duration-150 hover:bg-container-active hover:scale-105 max-[550px]:p-3;
   }
 }
 
 @layer utilities {
-  .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
+  .section {
+    @apply py-10 lg:py-16;
+  }
+  .section-title {
+    @apply text-3xl text-green-light font-extrabold uppercase mb-10 max-[768px]:mb-6 max-[550px]:text-2xl;
   }
 
-  .padding-x {
-    @apply sm:px-16 px-8;
+  .container-title {
+    @apply font-bold text-xl max-[550px]:text-lg;
   }
-
-  .padding-y {
-    @apply sm:py-24 py-12;
-  }
-
-  .padding-l {
-    @apply sm:pl-16 pl-8;
-  }
-
-  .padding-r {
-    @apply sm:pr-16 pr-8;
-  }
-
-  .padding-t {
-    @apply sm:pt-24 pt-12;
-  }
-
-  .padding-b {
-    @apply sm:pb-24 pb-12;
-  }
-
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
+  .container-text {
+    @apply text-sm mt-2 mb-7 max-[550px]:text-xs;
   }
 }

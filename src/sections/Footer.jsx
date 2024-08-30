@@ -6,15 +6,18 @@ import { SvgArrow } from '../components/svg';
 
 const Footer = () => {
   return (
-    <div className="bg-slate-800 pt-10">
-      <div className="max-container flex justify-between pb-7">
-        <div className="w-[30%] flex flex-col items-start">
-          <a href="/site-app-ysl/" className="font-orbitron text-3xl font-semibold flex flex-col items-end text-light-green">
+    <div className="bg-slate-800 pt-5 lg:pt-10">
+      <div className="max-container flex justify-between pb-7 max-[650px]:flex-col max-[650px]:items-center">
+        <div className="flex flex-col items-start">
+          <a
+            href="/site-app-ysl/"
+            className="font-orbitron leading-10 max-[850px]:text-xl text-3xl font-semibold flex flex-col items-end text-green-light"
+          >
             YSL Systems
-            <span className="font-orbitron text-[0.9rem] mt-[-1.2rem]">software & solutions</span>
+            <span className="font-orbitron text-sm max-[850px]:text-xs">software & solutions</span>
           </a>
         </div>
-        <div className="w-[30%] flex flex-col items-start pt-10">
+        <div className="flex flex-col items-start pt-10">
           <h4 className="text-slate-100 text-xl">Навигация</h4>
           <ul>
             {navLinks.map((item) => (
@@ -27,12 +30,14 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="w-[30%] flex flex-col items-start pt-10">
+        <div className="max-[992px]:w-[50%] max-[650px]:w-full max-[650px]:items-center flex flex-col items-start pt-10">
           <h4 className="text-slate-100 text-xl">Услуги</h4>
-          <ul>
+          <ul className="">
             {ourServices.map((item) => (
               <li key={item.id} className="flex items-center gap-2 mt-3">
-                <SvgArrow size={20} />
+                <div>
+                  <SvgArrow size={20} />
+                </div>
                 <Link to={`/site-app-ysl/service/${item.href}`} className="text-slate-200 text-sm transition hover:text-white">
                   {item.title}
                 </Link>
@@ -42,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="py-3" />
-      <div className="max-container flex justify-between pb-4">
+      <div className="max-container flex justify-between pb-4 max-[380px]:flex-col max-[380px]:items-center">
         <div>
           <span className="text-slate-400 mr-5">© 2024</span>
           <span className="text-slate-200">YSL Systems</span>
