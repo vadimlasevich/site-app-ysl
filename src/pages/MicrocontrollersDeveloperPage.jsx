@@ -8,51 +8,50 @@ import { SvgArrow } from '../components/svg';
 
 const MicrocontrollersDeveloperPage = () => {
   return (
-    <main className="font-montserrat flex flex-col justify-between min-h-screen">
+    <main className="font-montserrat bg-main-bg text-text min-h-screen">
       <Nav absolute={false} />
-      <div className="py-7 bg-gradient-to-r from-[#dbffe6] to-[#9affbb]">
+      <div className="py-7 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3] max-[992px]:py-5">
         <div className="max-container">
-          <h2 className="text-3xl font-bold">Работа с микроконтроллерами</h2>
+          <h2 className="text-3xl font-bold leading-9 max-[992px]:text-2xl max-[550px]:text-xl">Работа с микроконтроллерами</h2>
         </div>
       </div>
       <div className="max-container ">
-        <div className=" flex justify-between items-center my-10">
-          <div className="w-[48%] flex justify-center">
-            <img src={MicrokontrollerImage} className="w-[80%] max-h-[80%]" />
+        <div className=" flex justify-between items-center my-10 max-[650px]:flex-col-reverse max-[550px]:my-5">
+          <div className="w-[48%] flex justify-center  max-[650px]:w-[70%] max-[650px]:mt-10">
+            <img src={MicrokontrollerImage} className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]" />
           </div>
-          <div className="w-[48%]">
-            <h3 className="text-3xl font-black leading-9 mb-8">
+          <div className="w-[48%] max-[850px]:w-[60%] max-[650px]:w-full">
+            <h3 className="page-title">
               Профессиональные услуги по разработке программного обеспечения для микроконтроллеров ведущих мировых производителей
             </h3>
-            <p className="text-2xl leading-8">
+            <p className="page-subtitle">
               Наша компания предлагает услуги по разработке программного обеспечения для микроконтроллеров ведущих мировых
               производителей: Atmel (Microchip), Espressif и ST Microelectronics. Мы обеспечиваем полный цикл разработки — от
               проектирования и написания кода до тестирования и внедрения готового решения.
             </p>
           </div>
         </div>
-        <div className="py-16">
-          <h3 className="text-3xl font-black leading-9 mb-8">Наши услуги включают:</h3>
+        <div className="py-16 max-[650px]:py-8">
+          <h3 className="page-title-section">Наши услуги включают:</h3>
           <div>
             {microcontrollersServices.map((item) => (
-              <div key={item.id} className="mt-8 flex gap-4 items-center">
-                <SvgArrow size={30} />
-                <p className="text-xl">{item.text}</p>
+              <div key={item.id} className="mt-8 flex gap-4 items-center max-[650px]:gap-2">
+                <div className="w-10">
+                  <SvgArrow size={'100%'} />
+                </div>
+                <p className="page-text">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="py-10">
-          <h3 className="text-3xl font-black leading-9 mb-8">Почему выбирают нас:</h3>
-          <div className="flex gap-6 justify-between">
+        <div className="py-10 max-[650px]:py-5">
+          <h3 className="page-title-section">Почему выбирают нас:</h3>
+          <div className="flex flex-wrap justify-between max-[850px]:justify-around max-[850px]:gap-y-4">
             {microcontrollersWhyChoose.map((item) => (
-              <div
-                key={item.id}
-                className="w-[25%] flex flex-col  justify-start  p-6 shadow-xl rounded-xl bg-primary duration-150 hover:bg-green-200 hover:scale-105"
-              >
+              <div key={item.id} className="container flex flex-col w-[23%] max-[850px]:w-[49%] max-[550px]:w-full">
                 <div className="flex gap-4 mb-4">
-                  <span className="text-2xl font-bold text-light-green">{item.id}.</span>
+                  <span className="text-2xl font-bold text-green-light">{item.id}.</span>
                   <h5 className="text-xl font-bold ">{item.title}</h5>
                 </div>
                 <p>{item.text}</p>
@@ -62,7 +61,7 @@ const MicrocontrollersDeveloperPage = () => {
         </div>
 
         <div className="mt-20 flex flex-col justify-center mb-6">
-          <p className="text-center mb-14 text-2xl font-bold">
+          <p className="text-center page-title !leading-8">
             Обратитесь к нам, чтобы получить консультацию и обсудить ваш проект. Мы поможем воплотить вашу идею в эффективное и
             надежное решение!
           </p>

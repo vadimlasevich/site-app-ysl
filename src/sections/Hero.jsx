@@ -27,8 +27,8 @@ const Hero = () => {
             Наша команда экспертов создает решения для различных отраслей — от умного дома до промышленной автоматизации.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] max-[600px]:mt-7">
-          <img src={HeroImg} className="w-[80%] max-h-[80%]" />
+        <div className="flex justify-center w-[50%] max-[600px]:mt-7 max-[600px]:w-[70%]">
+          <img src={HeroImg} className="w-[80%] max-h-[80%] max-[600px]:max-h-[100%]" />
         </div>
       </div>
     </div>
