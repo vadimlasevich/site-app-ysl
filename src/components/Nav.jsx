@@ -1,14 +1,12 @@
 import React from 'react';
 import { navLinks } from '../constans/index.jsx';
 import { HashLink } from 'react-router-hash-link';
+import Burger from './Burger.jsx';
 
-const Nav = ({ absolute }) => {
+const Nav = () => {
   return (
-    <header
-      className="max-container w-full py-2 absolute top-0 left-1/2 -translate-x-1/2 translate-y-0"
-      style={{ position: !absolute ? 'relative' : 'absolute' }}
-    >
-      <nav className="flex items-center">
+    <header className="max-container w-full py-2 absolute top-0 left-1/2 -translate-x-1/2 translate-y-0">
+      <nav className="flex items-center justify-between">
         <a
           href="/site-app-ysl/"
           className="font-orbitron text-3xl leading-10  font-semibold flex flex-col items-end text-green max-[550px]:text-2xl"
@@ -32,6 +30,9 @@ const Nav = ({ absolute }) => {
           <HashLink to="/site-app-ysl/#contacts" className="button">
             Связаться с нами
           </HashLink>
+        </div>
+        <div className="hidden max-[850px]:block">
+          <Burger />
         </div>
       </nav>
     </header>

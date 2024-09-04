@@ -1,22 +1,65 @@
-import React from 'react';
-import { Nav } from '../components';
+import React, { useEffect } from 'react';
+import { Nav, MobileMenu } from '../components';
 import { Footer } from '../sections';
+import { HashLink } from 'react-router-hash-link';
+import { pagesContent } from '../constans';
+import { useMobileMenu } from '../store';
 
 const WebDeveloperPage = () => {
+  const active = useMobileMenu((state) => state.active);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <main className="font-montserrat flex flex-col justify-between min-h-screen">
-      <Nav absolute={false} />
-      <div className="flex flex-col grow justify-between">
-        <div className="py-7 bg-light-green ">
-          <div className="max-container">
-            <h2 className="text-3xl font-bold">Веб-разработка</h2>
+    <main className="font-montserrat bg-main-bg text-text min-h-screen">
+      <Nav />
+      <div className="py-7 mt-24 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3] max-[992px]:py-5">
+        <div className="max-container">
+          <h2 className="text-3xl font-bold leading-9 max-[992px]:text-2xl max-[550px]:text-xl">
+            {pagesContent.webDevelopers.name}
+          </h2>
+        </div>
+      </div>
+      <div className="max-container ">
+        <div className=" flex justify-between items-center my-10 max-[650px]:flex-col-reverse max-[550px]:my-5">
+          <div className="w-[48%] flex justify-center  max-[650px]:w-[70%] max-[650px]:mt-10">
+            <img src={pagesContent.webDevelopers.image} className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]" />
+          </div>
+          <div className="w-[48%] max-[850px]:w-[60%] max-[650px]:w-full">
+            <h3 className="page-title">{pagesContent.webDevelopers.title}</h3>
+            <p className="page-subtitle">{pagesContent.webDevelopers.subtitle}</p>
           </div>
         </div>
-        <div className="max-container">
-          <p>Здесь нужны текста, картинки, фото, примеры, все что можно придумать</p>
+
+        <div className="mt-24">
+          <div className="container">
+            <h4 className="container-title mb-3">{pagesContent.webDevelopers.sectionWebAppName}</h4>
+            <p>{pagesContent.webDevelopers.sectionWebAppContent}</p>
+          </div>
+
+          <div className="container mt-10">
+            <h4 className="container-title mb-3">{pagesContent.webDevelopers.sectionDesktopAppName}</h4>
+            <p>{pagesContent.webDevelopers.sectionDesktopAppContent}</p>
+          </div>
+
+          <div className="container mt-10">
+            <h4 className="container-title mb-3">{pagesContent.webDevelopers.sectionSiteName}</h4>
+            <p>{pagesContent.webDevelopers.sectionSiteContent}</p>
+          </div>
         </div>
-        <Footer />
+
+        <div className="mt-20 flex flex-col justify-center mb-6">
+          <p className="text-center page-title !leading-8">{pagesContent.webDevelopers.contactsText}</p>
+          <HashLink to="/site-app-ysl/#contacts" className="button">
+            {pagesContent.webDevelopers.contactsButton}
+          </HashLink>
+        </div>
       </div>
+
+      <Footer />
+      {active && <MobileMenu />}
     </main>
   );
 };

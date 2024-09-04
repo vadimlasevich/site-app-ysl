@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroImg from '../assets/images/hero-img.png';
 import { Link } from 'react-router-dom';
+import { pagesContent } from '../constans';
 
 const Hero = () => {
   return (
@@ -24,11 +24,11 @@ const Hero = () => {
             </Link>
           </h1>
           <p className="mt-4 text-lg lg:text-xl max-[600px]:text-center max-[600px]:text-base">
-            Наша команда экспертов создает решения для различных отраслей — от умного дома до промышленной автоматизации.
+            {pagesContent.main.sectionHero.subtitle}
           </p>
         </div>
-        <div className="flex justify-center w-[50%] max-[600px]:mt-7 max-[600px]:w-[70%]">
-          <img src={HeroImg} className="w-[80%] max-h-[80%] max-[600px]:max-h-[100%]" />
+        <div className="flex justify-center w-[50%] max-[600px]:mt-7 max-[600px]:w-[90%]">
+          <img src={pagesContent.main.sectionHero.image} className="w-[80%] max-h-[80%] max-[600px]:max-h-[100%]" />
         </div>
       </div>
     </div>

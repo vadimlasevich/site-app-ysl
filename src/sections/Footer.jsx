@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { navLinks, ourServices } from '../constans';
+import { navLinks, pagesContent } from '../constans';
 import { SvgArrow } from '../components/svg';
 
 const Footer = () => {
@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="max-[992px]:w-[50%] max-[650px]:w-full max-[650px]:items-center flex flex-col items-start pt-10">
           <h4 className="text-slate-100 text-xl">Услуги</h4>
           <ul className="">
-            {ourServices.map((item) => (
+            {pagesContent.main.sectionServicesContent.map((item) => (
               <li key={item.id} className="flex items-center gap-2 mt-3">
                 <div>
                   <SvgArrow size={20} />

@@ -1,13 +1,13 @@
 import React from 'react';
-import { ourServices } from '../constans/index.jsx';
 import { Link } from 'react-router-dom';
+import { pagesContent } from '../constans';
 
 const OurServices = () => {
   return (
     <div className="max-container">
-      <h2 className="section-title">наши услуги</h2>
+      <h2 className="section-title">{pagesContent.main.sectionServicesName}</h2>
       <div className="flex flex-wrap gap-y-8 max-[600px]:gap-y-4 justify-between">
-        {ourServices.map((item) => (
+        {pagesContent.main.sectionServicesContent.map((item) => (
           <div key={item.id} className="container flex flex-col justify-between w-[32%] max-[850px]:w-[49%] max-[550px]:w-full">
             <div className="mb-2 w-12 max-[550px]:w-8">{item.icon}</div>
             <div>
@@ -15,7 +15,7 @@ const OurServices = () => {
               <p className="container-text">{item.subtitle}</p>
             </div>
             <Link to={`service/${item.href}`} className="button self-start">
-              Подробнее
+              {item.button}
             </Link>
           </div>
         ))}

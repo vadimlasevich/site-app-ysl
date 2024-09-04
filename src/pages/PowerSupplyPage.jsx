@@ -1,44 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { Footer } from '../sections';
 import { SvgArrow } from '../components/svg';
-import { Nav } from '../components';
-import PowerSupplyImage from '../assets/images/battery.png';
-import { benefitsPowerSupply, solutionsPowerSupply, whyChoosePowerSupply, workingPowerSupply } from '../constans';
+import { Nav, MobileMenu } from '../components';
+import { pagesContent } from '../constans';
+import { useMobileMenu } from '../store';
 
 const PowerSupplyPage = () => {
+  const active = useMobileMenu((state) => state.active);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="font-montserrat bg-main-bg text-text min-h-screen">
-      <Nav absolute={false} />
+      <Nav />
 
-      <div className="py-7 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3] max-[992px]:py-5">
+      <div className="py-7 mt-24 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3] max-[992px]:py-5">
         <div className="max-container">
           <h2 className="text-3xl font-bold leading-9 max-[992px]:text-2xl max-[550px]:text-xl">
-            Энергия солнца для вашего дома и бизнеса
+            {pagesContent.powerSupply.name}
           </h2>
         </div>
       </div>
 
       <div className="max-container flex justify-between items-center my-10 max-[650px]:flex-col-reverse max-[550px]:my-5">
         <div className="w-[48%] flex justify-center  max-[650px]:w-[70%] max-[650px]:mt-10">
-          <img src={PowerSupplyImage} className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]" />
+          <img src={pagesContent.powerSupply.image} className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]" />
         </div>
         <div className="w-[48%] max-[850px]:w-[60%] max-[650px]:w-full">
-          <h3 className="page-title">Надежное и экологичное решение для тех, кто стремится к автономности и безопасности</h3>
-          <p className="page-subtitle">
-            Солнечные батареи и бесперебойные системы подачи электричества — это надежное и экологичное решение для тех, кто
-            стремится к автономности и безопасности. Независимо от погодных условий или перебоев в электросети, вы всегда будете
-            обеспечены энергией.
-          </p>
+          <h3 className="page-title">{pagesContent.powerSupply.title}</h3>
+          <p className="page-subtitle">{pagesContent.powerSupply.subtitle}</p>
         </div>
       </div>
 
       <div className="max-container py-16 max-[650px]:py-8">
-        <h3 className="page-title-section">Наши решения:</h3>
+        <h3 className="page-title-section">{pagesContent.powerSupply.sectionSolutionsName}</h3>
         <div>
-          {solutionsPowerSupply.map((item) => (
+          {pagesContent.powerSupply.sectionSolutionsContent.map((item) => (
             <div key={item.id} className="mt-8 flex items-start gap-4 max-[650px]:gap-2">
-              <div className="w-10">
+              <div className="w-6 min-w-6 max-[650px]:w-4 max-[650px]:min-w-4">
                 <SvgArrow size={'100%'} />
               </div>
               <div className="flex-col">
@@ -52,9 +54,9 @@ const PowerSupplyPage = () => {
 
       <div className=" py-10 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3]">
         <div className="max-container">
-          <h3 className="page-title-section">Почему выбирают нас:</h3>
+          <h3 className="page-title-section">{pagesContent.powerSupply.sectionWhyChooseName}</h3>
           <div className="flex flex-wrap justify-between max-[850px]:justify-around max-[850px]:gap-y-4">
-            {whyChoosePowerSupply.map((item) => (
+            {pagesContent.powerSupply.sectionWhyChooseContent.map((item) => (
               <div
                 key={item.id}
                 className="w-[32%] flex flex-col  justify-start max-[850px]:w-[49%] max-[550px]:w-full container"
@@ -71,9 +73,9 @@ const PowerSupplyPage = () => {
       </div>
 
       <div className="max-container py-10 ">
-        <h3 className="page-title-section">Как это работает?</h3>
+        <h3 className="page-title-section">{pagesContent.powerSupply.sectionWorkingName}</h3>
         <div className="flex flex-wrap justify-between max-[850px]:justify-around max-[850px]:gap-y-4">
-          {workingPowerSupply.map((item) => (
+          {pagesContent.powerSupply.sectionWorkingContent.map((item) => (
             <div key={item.id} className="w-[32%] flex flex-col  justify-start max-[850px]:w-[49%] max-[550px]:w-full container">
               <div className="flex gap-4 mb-4">
                 <span className="text-2xl font-bold text-green-light">{item.id}.</span>
@@ -87,9 +89,9 @@ const PowerSupplyPage = () => {
 
       <div className="py-10 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3]">
         <div className="max-container">
-          <h3 className="page-title-section">Преимущества для вас:</h3>
+          <h3 className="page-title-section">{pagesContent.powerSupply.sectionBenefitsName}</h3>
           <div className="flex flex-wrap justify-between max-[850px]:justify-around max-[850px]:gap-y-4">
-            {benefitsPowerSupply.map((item) => (
+            {pagesContent.powerSupply.sectionBenefitsContent.map((item) => (
               <div
                 key={item.id}
                 className="w-[32%] flex flex-col  justify-start  container max-[850px]:w-[49%] max-[550px]:w-full"
@@ -106,16 +108,14 @@ const PowerSupplyPage = () => {
       </div>
 
       <div className="max-container mt-20 flex flex-col justify-center mb-6">
-        <p className="text-center page-title !leading-8">
-          Свяжитесь с нами сегодня, чтобы узнать больше о том, как наши солнечные батареи и бесперебойные системы подачи
-          электричества могут улучшить вашу жизнь и бизнес.
-        </p>
+        <p className="text-center page-title !leading-8">{pagesContent.powerSupply.contactsText}</p>
         <HashLink to="/site-app-ysl/#contacts" className="button">
-          Связаться с нами
+          {pagesContent.powerSupply.contactsButton}
         </HashLink>
       </div>
 
       <Footer />
+      {active && <MobileMenu />}
     </main>
   );
 };
