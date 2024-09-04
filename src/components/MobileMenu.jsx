@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { navLinks } from '../constans';
 import { HashLink } from 'react-router-hash-link';
 import { useMobileMenu } from '../store';
 import Burger from './Burger';
 
 const MobileMenu = () => {
+  const active = useMobileMenu((state) => state.active);
   const selectedMobileMenu = useMobileMenu((state) => state.selectedMobileMenu);
 
   return (
