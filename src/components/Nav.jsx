@@ -24,7 +24,7 @@ const Nav = () => {
       <header className="max-container w-full ">
         <nav className="flex items-center justify-between">
           <a
-            href="/site-app-ysl/"
+            href="/"
             className="font-orbitron text-3xl leading-10  font-semibold flex flex-col items-end text-green max-[550px]:text-2xl"
           >
             YSL Systems
@@ -43,7 +43,7 @@ const Nav = () => {
                 </li>
               ))}
             </ul>
-            <HashLink to="/site-app-ysl/#contacts" className="button">
+            <HashLink to="/#contacts" className="button">
               Связаться с нами
             </HashLink>
           </div>

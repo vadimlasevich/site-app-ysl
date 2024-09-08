@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="max-container flex justify-between pb-7 max-[650px]:flex-col max-[650px]:items-center">
         <div className="flex flex-col items-start">
           <a
-            href="/site-app-ysl/"
+            href="/"
             className="font-orbitron leading-10 max-[850px]:text-xl text-3xl font-semibold flex flex-col items-end text-green-light"
           >
             YSL Systems
@@ -38,7 +38,7 @@ const Footer = () => {
                 <div>
                   <SvgArrow size={20} />
                 </div>
-                <Link to={`/site-app-ysl/service/${item.href}`} className="text-slate-200 text-sm transition hover:text-white">
+                <Link to={`/service/${item.href}`} className="text-slate-200 text-sm transition hover:text-white">
                   {item.title}
                 </Link>
               </li>

@@ -19,7 +19,7 @@ const RepairPage = () => {
       <Nav />
       <main className="font-montserrat bg-main-bg text-text min-h-screen relative z-10">
         <AnimatedBackgroundPage />
-        <div className="py-7 mt-24 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3] max-[992px]:py-5">
+        <div className="py-7 mt-10 bg-gradient-to-r from-[#aed8bd] to-[#f3fff3] max-[992px]:py-5">
           <div className="max-container">
             <h2 className="text-3xl font-bold leading-9 max-[992px]:text-2xl max-[550px]:text-xl">{pagesContent.repair.name}</h2>
           </div>
@@ -70,7 +70,7 @@ const RepairPage = () => {
 
           <div className="mt-20 flex flex-col justify-center mb-6">
             <p className="text-center page-title !leading-8">{pagesContent.repair.contactsText}</p>
-            <HashLink to="/site-app-ysl/#contacts" className="button">
+            <HashLink to="/#contacts" className="button">
               {pagesContent.repair.contactsButton}
             </HashLink>
           </div>

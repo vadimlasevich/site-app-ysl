@@ -1,5 +1,5 @@
 {
-  "homepage": "https://vadimlasevich.github.io/site-app-ysl/",
+  "homepage": "https://yslsystems.by/",
   "name": "site-app-ysl",
   "private": true,
   "version": "0.0.0",
@@ -7,6 +7,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "deployProd": "vite build && scp -r dist/* yslsystems@93.125.99.49:~/public_html",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

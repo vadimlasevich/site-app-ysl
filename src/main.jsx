@@ -15,32 +15,32 @@ import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: '/site-app-ysl/',
+    path: '/',
     element: <App />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: '/site-app-ysl/service/repair',
+    path: '/service/repair',
     element: <RepairPage />,
   },
   {
-    path: '/site-app-ysl/service/web-development',
+    path: '/service/web-development',
     element: <WebDeveloperPage />,
   },
   {
-    path: '/site-app-ysl/service/mobile-development',
+    path: '/service/mobile-development',
     element: <MobileDeveloperPage />,
   },
   {
-    path: '/site-app-ysl/service/microcontroller-development',
+    path: '/service/microcontroller-development',
     element: <MicrocontrollersDeveloperPage />,
   },
   {
-    path: '/site-app-ysl/service/3D-printing',
+    path: '/service/3D-printing',
     element: <PrintingPage />,
   },
   {
-    path: '/site-app-ysl/service/power-supply',
+    path: '/service/power-supply',
     element: <PowerSupplyPage />,
   },
 ]);

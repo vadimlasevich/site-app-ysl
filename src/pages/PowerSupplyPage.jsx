@@ -115,7 +115,7 @@ const PowerSupplyPage = () => {
 
         <div className="max-container mt-20 flex flex-col justify-center mb-6">
           <p className="text-center page-title !leading-8">{pagesContent.powerSupply.contactsText}</p>
-          <HashLink to="/site-app-ysl/#contacts" className="button">
+          <HashLink to="/#contacts" className="button">
             {pagesContent.powerSupply.contactsButton}
           </HashLink>
         </div>

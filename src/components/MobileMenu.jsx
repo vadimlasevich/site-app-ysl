@@ -16,7 +16,11 @@ const MobileMenu = () => {
       </div>
 
       <div className="fixed inset-0 bg-slate-900 bg-opacity-70" onClick={selectedMobileMenu}></div>
-      <div className="absolute z-[300] top-0 right-0 flex flex-col bg-linear-from pt-14 pb-6 px-5 h-[20rem] rounded-bl-2xl">
+      <div
+        className={`absolute z-[300] top-0 transform transition-transform duration-300 ${
+          active ? 'right-0' : 'right-[-100]'
+        }  flex flex-col bg-linear-from pt-14 pb-6 px-5 h-[20rem] rounded-bl-2xl`}
+      >
         <ul className="flex flex-col justify-center align-bottom gap-5">
           {navLinks.map((item) => (
             <li key={item.label} className=" self-center font-montserrat">
@@ -31,7 +35,7 @@ const MobileMenu = () => {
           ))}
         </ul>
         <div className="mt-auto">
-          <HashLink to="/site-app-ysl/#contacts" className="button" onClick={selectedMobileMenu}>
+          <HashLink to="/#contacts" className="button" onClick={selectedMobileMenu}>
             Связаться с нами
           </HashLink>
         </div>

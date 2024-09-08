@@ -73,7 +73,7 @@ const PrintingPage = () => {
 
           <div className="mt-20 flex flex-col justify-center mb-6">
             <p className="text-center page-title !leading-8">{pagesContent.printing3D.contactsText}</p>
-            <HashLink to="/site-app-ysl/#contacts" className="button">
+            <HashLink to="/#contacts" className="button">
               {pagesContent.printing3D.contactsButton}
             </HashLink>
           </div>

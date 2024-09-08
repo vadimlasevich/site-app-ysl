@@ -55,7 +55,7 @@ const WebDeveloperPage = () => {
 
           <div className="mt-20 flex flex-col justify-center mb-6">
             <p className="text-center page-title !leading-8">{pagesContent.webDevelopers.contactsText}</p>
-            <HashLink to="/site-app-ysl/#contacts" className="button">
+            <HashLink to="/#contacts" className="button">
               {pagesContent.webDevelopers.contactsButton}
             </HashLink>
           </div>
