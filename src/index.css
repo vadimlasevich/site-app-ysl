@@ -12,6 +12,7 @@
   --light-green: #19b45f;
   --footer-bg: #1c1d1c;
   --main-bg: #f8f6f4;
+  --header-active-bg: #f3fff3;
 }
 
 * {
@@ -54,10 +55,10 @@
   }
 
   .page-title {
-    @apply text-3xl font-bold leading-9 mb-8 max-[992px]:text-2xl max-[550px]:text-lg max-[550px]:mb-3;
+    @apply text-2xl font-bold leading-9 mb-8 max-[992px]:text-2xl max-[550px]:text-lg max-[550px]:mb-3;
   }
   .page-subtitle {
-    @apply text-2xl leading-8 max-[992px]:text-xl max-[550px]:text-base;
+    @apply text-xl leading-8 max-[992px]:text-xl max-[550px]:text-base;
   }
   .page-title-section {
     @apply text-2xl font-black leading-9 mb-3 max-[550px]:text-lg;

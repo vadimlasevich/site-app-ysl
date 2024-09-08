@@ -4,12 +4,11 @@ import { loadSlim } from 'tsparticles-slim';
 
 const AnimatedBackground = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    // await console.log(container);
   }, []);
 
   return (
@@ -29,7 +28,7 @@ const AnimatedBackground = () => {
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: 'push',
               },
               onHover: {
