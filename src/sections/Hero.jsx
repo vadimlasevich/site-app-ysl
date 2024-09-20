@@ -30,7 +30,11 @@ const Hero = () => {
         </div>
         <div className="flex justify-center w-[50%] max-[600px]:mt-7 max-[600px]:w-[90%]">
           <MouseParallax enableOnTouchDevice strength={0.03} lerpEase={0.5}>
-            <img src={pagesContent.main.sectionHero.image} className="w-[80%] max-h-[80%] max-[600px]:max-h-[100%]" />
+            <img
+              src={pagesContent.main.sectionHero.image}
+              className="w-[80%] max-h-[80%] max-[600px]:max-h-[100%]"
+              alt="YSL Systems промышленные и IT решения"
+            />
           </MouseParallax>
         </div>
       </div>

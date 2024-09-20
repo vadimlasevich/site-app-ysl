@@ -28,7 +28,11 @@ const MobileDeveloperPage = () => {
         <div className="max-container ">
           <div className=" flex justify-between items-center my-10 max-[650px]:flex-col-reverse max-[550px]:my-5">
             <div className="w-[48%] flex justify-center  max-[650px]:w-[70%] max-[650px]:mt-10">
-              <img src={pagesContent.mobileDevelopers.image} className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]" />
+              <img
+                src={pagesContent.mobileDevelopers.image}
+                className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]"
+                alt="Мобильные приложения для IOS и Android"
+              />
             </div>
             <div className="w-[48%] max-[850px]:w-[60%] max-[650px]:w-full">
               <h3 className="page-title">{pagesContent.mobileDevelopers.title}</h3>

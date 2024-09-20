@@ -33,7 +33,11 @@ const PrintingPage = () => {
               <p className="page-subtitle">{pagesContent.printing3D.subtitle}</p>
             </div>
             <div className="w-[48%] flex justify-center max-[650px]:w-[70%] max-[650px]:mt-10">
-              <img src={pagesContent.printing3D.image} className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]" />
+              <img
+                src={pagesContent.printing3D.image}
+                className="w-[80%] max-h-[80%] max-[650px]:max-h-[100%]"
+                alt="Моделирование и печать 3Д"
+              />
             </div>
           </div>
           <div className="py-16 max-[650px]:py-8">
