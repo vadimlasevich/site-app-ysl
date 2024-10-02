@@ -35,7 +35,6 @@ const FormContacts = () => {
 
   const onSubmit = handleSubmit(async (data) => {
     setLoading(true);
-    console.log(data);
 
     const url = 'https://apiv2.yslsystems.by/api/user/support-site';
 

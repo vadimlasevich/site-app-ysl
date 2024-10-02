@@ -47,14 +47,19 @@ const Footer = () => {
         </div>
       </div>
       <hr className="py-3" />
-      <div className="max-container flex justify-between pb-4 max-[380px]:flex-col max-[380px]:items-center">
-        <div>
+      <div className="max-container flex justify-between pb-4 max-[560px]:flex-col max-[560px]:items-center">
+        <div className="max-[560px]:mb-3">
           <span className="text-slate-400 mr-5">© 2024</span>
           <span className="text-slate-200">YSL Systems</span>
         </div>
-        <div>
-          <span className="text-gray-400 text-lg">УНП</span>
-          <span className="text-gray-400 ml-2">291884454</span>
+        <div className=" flex items-center max-[420px]:flex-col">
+          <div>
+            <span className="text-gray-400 text-lg mr-5">ООО "ИСЛ системы"</span>
+          </div>
+          <div className="flex items-center">
+            <p className="text-gray-400">УНП</p>
+            <p className="text-gray-400 ml-2">291884454</p>
+          </div>
         </div>
       </div>
     </div>
